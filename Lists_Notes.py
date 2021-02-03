@@ -1,0 +1,102 @@
+			# ----------------------------------> Lists in Python <--------------------------- #
+			
+-> A list is a datastructure which consist of different elements seperated by commas.
+
+-> To create a list we write: 
+	list = ['element1','element2'.......,'element(n)']
+
+-> Lists are mutable ( meaning that the object value will be overwritten instead of creation of a new object )
+
+-> slice operator ( [:] ) allows us to access the parts of a string, tuple, list etc.
+	For example:
+		list = [1,2,3,4,5,6,7,8,9,10]
+			print(list[2:6])	
+				will print [3,4,5,6]
+					It prints from the initial index till n-1, where n is the last index.
+
+	Another example can be a list where we also specify the number of steps b/w initial and final index
+			print(list[1:9:2])
+				will print [2,4,6,8]
+
+-> Appending value to the list
+	A function append(), is used to append new values to an existing string.
+		>> list = [1,2,3,4]
+		>> list.append(5)
+		>> print(list)
+		>> [1,2,3,4,5]
+
+	Insert function is also something similar, but here you can also specify the index you want to insert
+	value at.
+		Syntax:
+		list.insert(index,value)
+		>> list = [1,3,4]
+		>> insert.list(1,2)
+		>> print(list)
+		>> [1,2,3,4]
+
+-> Deleting a value from the list
+	Value in list can be deleted, by specifying the index
+		>> list = [1,2,3,4,5]
+		>> del list[4]
+		>> print(list)
+		>> [1,2,3,4]
+
+	Another function remove() can also be used, instead of index number, we specify the value we want to delete
+		>> list = [1,2,3,4,5]
+		>> list.remove(4)
+		>> print(list)
+		>> [1,2,3,4]
+
+	Pop function also remove the value on the specified index, if no index is specified then value at final
+	index is deleted.
+		>> list = [1,2,3,4]
+		>> list.pop(3)
+		>> print(list)
+		>> [1,2,3]
+
+-> Nested List
+	Since a list can have any type of data inside it, which include list itself.
+		>> list = [1,2,['a','b'],3]
+		>> print(list)
+		>> [1, 2, ['a', 'b'], 3]
+
+-> Cloning a List
+	A list can easily be copied, just like a variable.
+		>> list_one = ['a','b','c']
+		>> list_two = list_one
+		>> print(list_two)
+		>> ['a','b','c']
+
+-> Counting Duplicacy
+	count(), function is used to count the number of time an element is present in a list.
+		>> list = [1,2,1,1,5,6]
+		>> list.count(1)
+		>> 3 					#since 1 is occuring thrice in the list
+
+-> Index() : This function return the index for first occurence(lowest index) of specified value.
+		>> list = [3,5,6,7,6]
+		>> list.index(6)
+		>> 2				# 6 occurs first at index 2
+
+-> Reverse a list
+	A function called reverse(), can be used to reverse the list, this function takes the initial content
+	of the list, reverse their order and then store them back in the same list.
+		>> list = [1,2,3,4,5]
+		>> list.reverse()
+		>> print(list)
+		>> [5,4,3,2,1]
+
+-> Sorting a list
+	sort() function sorts the list in ascending order
+		>> list = [5,4,3,2,1]
+		>> list.sort()
+		>> print(list)
+		>> [1,2,3,4,5]
+
+-> Merging two different list
+	extent function merges two different list
+		>> list_one = [1,2,3,4,5]
+		>> list_two = [6,7,8,9,10]
+		>> list_one.extend(list_two)
+		>> print(list_one)
+		>> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
